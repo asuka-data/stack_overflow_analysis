@@ -1,4 +1,7 @@
 
+## Cleaning Rules
+--ta.first_answer IS NOT NULL
+      AND TIMESTAMP_DIFF(tta.first_answer,tta.question_time, HOUR) >= 0
 
 
 ### Key SQL
