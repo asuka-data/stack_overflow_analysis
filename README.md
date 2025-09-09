@@ -28,7 +28,7 @@ diffs AS(
 )
 SELECT
   APPROX_QUANTILES(diffs.hour_to_answer,100)[OFFSET(50)] AS h_median,
-  APPROX_QUANTILES(diffs.hour_to_answer,100)[OFFSET(90)] AS h_75p,
+  APPROX_QUANTILES(diffs.hour_to_answer,100)[OFFSET(75)] AS h_75p,
   APPROX_QUANTILES(diffs.minute_to_answer,100)[OFFSET(50)] AS m_median
 FROM diffs;
 
