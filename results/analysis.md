@@ -33,3 +33,6 @@ FROM diffs;
 | 0        | 5     | 34       |
 
 ```
+**Insights**
+-  **Median(Hour) = 0**: In most cases, answers arrive within the first hour.
+-  
