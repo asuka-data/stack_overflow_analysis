@@ -39,10 +39,7 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
 
   
 ## Suggestions
-- **Repeat coupon** : Deliver repeat coupons after first purchase to convert *one_time* into *repeat*,
-- **Weekend Advertisement** : Run targeting Ads on weekend
-- **Key Products** : Use top selling products for the ad image
-- **Stock Monitoring** : Decrease sales opotunity loss by monitoring high-selling product stock
+
 
 ##  Dashboard
 ![thelook_ecommerce Dashboard](img/dashboard.png)
@@ -53,9 +50,9 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
 ```
 stack_overflow_analysis/
 ├── sql/
-│ ├── 01_cleaning.sql
-│ ├── 02_monthly_sales.sql
-│ ├── 03_cohort.sql
+│ ├── 01_question_trend.sql
+│ ├── 02_tag_trend.sql
+│ ├── 03_tta.sql
 ├── results/
 │ └── exploration_summary.md
 ├── img/
