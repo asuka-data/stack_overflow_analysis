@@ -36,7 +36,7 @@ ORDER BY year;
 
 -- Calculate answered rate by Year
 SELECT
-  COUNT(DISTINCT q.id) AS total_questions,
+  COUNT(q.id) AS total_questions,
   COUNT(DISTINCT a.parent_id) AS answered_questions,
   SAFE_DIVIDE(COUNT(DISTINCT a.parent_id),COUNT(q.id)) AS answered_rate,
   EXTRACT(YEAR FROM a.creation_date) AS year
