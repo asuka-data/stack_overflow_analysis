@@ -1,4 +1,14 @@
+## Stack Overflow Data Analysis
 
+
+## 1. Data Preperartion
+- Review the data required for analysis 
+- Review data structures and ranges
+- Define cleaning rules
+
+
+## 2. Data Cleaning Steps
+- Excluded 
 
 ### Key SQL
 ```sql
