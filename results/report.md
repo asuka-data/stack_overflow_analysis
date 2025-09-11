@@ -8,11 +8,15 @@
 
 
 ## 2. Data Cleaning Steps
-- Excluded 
+- Excluded Null data: `creation_date` IS NULL
+- Excluded invalid data: `first_answer` >= `question_creation_date`
 
+## 3. Data Exploration Sumaary
 ### Key SQL
+
+#### TTA 
 ```sql
--- calculate median and quantiles of Time-To-Answer (TTA)
+-- calculate median and percentiles of Time-To-Answer (TTA)
 WITH tta AS(
   SELECT 
    q.id, 
