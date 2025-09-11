@@ -8,7 +8,7 @@
 
 
 ## 2. Data Cleaning Steps
-- Excluded Null data: `creation_date` IS NULL
+- Excluded Null data: `creation_date` IS NOT NULL
 - Excluded invalid data: `first_answer` >= `question_creation_date`
 
 ## 3. Data Exploration Sumary
