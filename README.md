@@ -67,15 +67,15 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
 ```
 stack_overflow_analysis/
 ├── sql/
-│   ├── 01_question_trend.sql[01_question_trend.sql]()
-│   ├── 02_tag_trend.sql[02_tag_trend.sql]()
-│   └── 03_tta.sql[](03_tta.sql)
-├── results/
-│   ├── report.md[report.md]()
+│   ├── 01_question_trend.sql
+│   ├── 02_tag_trend.sql
+│   └── 03_tta.sql
+├── results[results](results)/
+│   ├── report.md
 │   └── img/
-│       ├── stack_overflow_dashboard.png[stack_overflow_dashboard.png]()
-│       ├── trend-plot.png[trend-plot.png]()
-│       └── tag_popularity.png[tag_popularity.png]()
+│       ├── stack_overflow_dashboard.png
+│       ├── trend-plot.png
+│       └── tag_popularity.png
 └── README.md
 ```
 ---
