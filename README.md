@@ -1,14 +1,14 @@
 # Stack Overflow Analysis
 
 ## Project Overview
-This project anlyzes Stack Overflow data to figure out technical treands and community health using Stack Overflow's puclic data.
+This project analyzes Stack Overflow data to figure out technical trends and community health using Stack Overflow's puclic data.
 
 ---
 
 ## Analysis Points
-- **Total questions Trend**: Capture technical trends
-- **Time to Answer(TTA)**: Measure community health level
-- **Insights**: Provide insghts for the operational strategies
+- **Total questions Trend**: Capture technology popularity over time
+- **Time to First Answer(TTA)**: Median time from question creation to the **first** answer\
+- **Insights**: actionable takeaways for community operations
 
 ---
 
@@ -29,6 +29,13 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
 ## Cleaning Rules
 - **`creation_date` IS NOT NULl**: Excluded missing answer data
 - **`first_answer` >= `question_creation_date`**: Removed invalid data
+
+---
+
+## Methods (Reproducibility)
+- TTA = `MIN(answer.creation_date) - question.creation_date` per question
+- Median via `APPROX_QUANTILES` in BigQuery
+- Period analyzed: 2019-01 to 2020-12
 
 ---
 
@@ -60,15 +67,15 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
 ```
 stack_overflow_analysis/
 ├── sql/
-│   ├── 01_question_trend.sql
-│   ├── 02_tag_trend.sql
-│   └── 03_tta.sql
+│   ├── 01_question_trend.sql[01_question_trend.sql]()
+│   ├── 02_tag_trend.sql[02_tag_trend.sql]()
+│   └── 03_tta.sql[](03_tta.sql)
 ├── results/
-│   ├── report.md
+│   ├── report.md[report.md]()
 │   └── img/
-│       ├── Dashboard.png
-│       ├── trend-plot.png
-│       └── tag_popularity.png
+│       ├── stack_overflow_dashboard.png[stack_overflow_dashboard.png]()
+│       ├── trend-plot.png[trend-plot.png]()
+│       └── tag_popularity.png[tag_popularity.png]()
 └── README.md
 ```
 ---
