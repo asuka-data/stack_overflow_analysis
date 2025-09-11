@@ -47,6 +47,32 @@ ORDER BY year;
 | 15  | 2022 | 1013610            | 0.7731        | 1311167         |
 ```
 
+#### Tag popularity by year
+```sql
+-- Calculate popular tag trend by year and month
+WITH question_tag AS(
+  SELECT
+    id,
+    tag,
+    creation_date
+  FROM bigquery-public-data.stackoverflow.posts_questions
+  CROSS JOIN UNNEST(IFNULL(
+    SPLIT(tags,'|'),[]))
+    AS tag
+)
+SELECT
+  COUNT(*) AS total,
+  question_tag.tag AS tag_type,
+  FORMAT_DATE('%Y%m',DATE(creation_date)) AS ym
+FROM question_tag
+WHERE tag IN('sql','python','javascript')   -- limited major tags
+GROUP BY ym, tag_type
+ORDER BY ym, tag_type;
+
+```
+See more details in the img file 
+- [Tag popularoty]()
+
 #### Analysis of TTA 
 ```sql
 -- calculate median and percentiles of Time-To-Answer (TTA)
@@ -80,6 +106,9 @@ FROM diffs;
 | 0        | 5     | 34       |
 
 ```
-**Insights**
--  **Median(Hour) = 0**: In most cases, answers arrive within the first hour.
--  
+
+
+## 4. Summary
+- The answer rate has shown an upward trend year by year.
+- In most cases, answers are received within the first hour.
+- The popularity of the top three tags has shown a downward trend, possibly due to the emergence of new technologies in recent years.
