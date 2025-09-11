@@ -32,7 +32,7 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
 
 ---
 
-**Key Insights**
+## Key Insights
 -  **Python**: The number of questions concerning python is increasing.
 -  **Median(Minute) = 34**: On average, it takes about **34 minutes** for the first answer.
 -  **75percentile = 5 hours**: 75% of questions receive their first answer within **5 hours***.
@@ -40,9 +40,14 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
   
 ## Suggestions
 
+---
 
 ##  Dashboard
+- Sample Visual(Trend lines by year)
 ![Stack Overflow Dashboard](results/img/Dashboard.png)
+
+- Tableau Public
+  [View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/StackOverflow_17575488423400/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 --- 
 
@@ -50,13 +55,15 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
 ```
 stack_overflow_analysis/
 ├── sql/
-│ ├── 01_question_trend.sql
-│ ├── 02_tag_trend.sql
-│ ├── 03_tta.sql
+│   ├── 01_question_trend.sql
+│   ├── 02_tag_trend.sql
+│   └── 03_tta.sql
 ├── results/
-│ └── exploration_summary.md
-├── img/
-│ └── dashboard.png
+│   ├── report.md
+│   └── img/
+│       ├── Dashboard.png
+│       ├── trend-plot.png
+│       └── tag_popularity.png
 └── README.md
 ```
 ---
