@@ -8,7 +8,7 @@ This project anlyzes Stack Overflow data to figure out technical treands and com
 ## Analysis Points
 - **Total questions Trend**: Capture technical trends
 - **Time to Answer(TTA)**: Measure community health level
-- **Suggestions**: Provide insghts for the operational strategies
+- **Insights**: Provide insghts for the operational strategies
 
 ---
 
@@ -27,20 +27,25 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
 ---
 
 ## Cleaning Rules
-- **creation_date IS NOT NULl**: Excluded missing answer data
-- **first_answer >= question_creation_date**: Removed invalid data
+- **`creation_date` IS NOT NULl**: Excluded missing answer data
+- **`first_answer` >= `question_creation_date`**: Removed invalid data
 
 ---
 
 ## Key Insights
 -  **Python**: The number of questions concerning python is increasing.
 -  **Median(Minute) = 34**: On average, it takes about **34 minutes** for the first answer.
--  **75percentile = 5 hours**: 75% of questions receive their first answer within **5 hours***.
-
-  
-## Suggestions
+-  **75percentile = 5 hours**: 75% of questions receive their first answer within **5 hours**.
+-  The answer rate has shown an upward trend year by year.
+-  The popularity of the top three tags has shown a downward trend, possibly due to **the emergence of new technologies** in recent years.
 
 ---
+
+## Next Steps
+- **New Technologies**: Analyze latest data and identify emerging technologies.
+- **Regular Health level check**: Maintain the community’s overall health by monitoring the answer rate regularly.
+
+--- 
 
 ##  Dashboard
 - Sample Visual(Trend lines by year)
