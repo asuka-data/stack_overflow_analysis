@@ -42,7 +42,7 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
 
 
 ##  Dashboard
-![thelook_ecommerce Dashboard](img/dashboard.png)
+![Stack Overflow Dashboard](results/img/Dashboard.png)
 
 --- 
 
