@@ -70,7 +70,7 @@ stack_overflow_analysis/
 │   ├── 01_question_trend.sql
 │   ├── 02_tag_trend.sql
 │   └── 03_tta.sql
-├── results[results](results)/
+├── results/
 │   ├── report.md
 │   └── img/
 │       ├── stack_overflow_dashboard.png
