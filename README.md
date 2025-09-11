@@ -7,7 +7,7 @@ This project analyzes Stack Overflow data to figure out technical trends and com
 
 ## Analysis Points
 - **Total questions Trend**: Capture technology popularity over time
-- **Time to First Answer(TTA)**: Median time from question creation to the **first** answer\
+- **Time to First Answer(TTA)**: Median time from question creation to the **first** answer
 - **Insights**: actionable takeaways for community operations
 
 ---
@@ -26,8 +26,13 @@ Big Query Public data - [stackoverflow](bigquery-public-data.stackoverflow)
 
 ---
 
+## Data Quality 
+- Number of missing values (creation_date for questions/answers): 0 
+- Number of excluded records (reversed records where answers came before questions): 1,024
+
+
 ## Cleaning Rules
-- **`creation_date` IS NOT NULl**: Excluded missing answer data
+- **`creation_date` IS NOT NULL**: Excluded missing answer data
 - **`first_answer` >= `question_creation_date`**: Removed invalid data
 
 ---
