@@ -71,7 +71,7 @@ ORDER BY ym, tag_type;
 
 ```
 See more details in the img file 
-- [Tag popularoty](results/img/tag_popularity.png)
+- [Tag popularoty](/results/img/tag_popularity.png)
 
 #### Analysis of TTA 
 ```sql
